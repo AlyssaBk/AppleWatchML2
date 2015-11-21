@@ -7,7 +7,7 @@
 //
 
 class Project {
-    var id: Int
-    var name: String
-    var link: String
+    var id: Int = 0
+    var name: String = ""
+    var link: String = ""
 }
