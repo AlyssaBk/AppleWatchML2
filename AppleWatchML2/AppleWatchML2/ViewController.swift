@@ -10,6 +10,8 @@ import UIKit
 import MBProgressHUD
 import Alamofire
 
+import SafariServices
+
 class ViewController: UITableViewController {
     
     var requestUtilityObject = RequestUtility()
@@ -48,8 +50,14 @@ class ViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+
+        let projectLink = requestUtilityObject.getProjectsList()[indexPath.row].link
+
+        let svc = SFSafariViewController(URL: NSURL(string: projectLink!)!)
+        self.presentViewController(svc, animated: true, completion: nil)
+        
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
-    
+
 }
 
