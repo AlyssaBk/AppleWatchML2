@@ -10,6 +10,8 @@ import UIKit
 import MBProgressHUD
 import Alamofire
 
+import SafariServices
+
 class ViewController: UITableViewController {
     
     var requestUtilityObject = RequestUtility()
@@ -43,8 +45,30 @@ class ViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("mainCell", forIndexPath: indexPath)
         let project = requestUtilityObject.getProjectsList()[indexPath.row]
         cell.textLabel?.text = project.name
+        
+        let projectLink = requestUtilityObject.getProjectsList()[indexPath.row].link
+        
+        if(((projectLink?.lowercaseString .hasPrefix("http"))) != false) {
+            cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        }
+        
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let projectLink = requestUtilityObject.getProjectsList()[indexPath.row].link
+        
+        if(((projectLink?.lowercaseString .hasPrefix("http"))) != false) {
+            let svc = SFSafariViewController(URL: NSURL(string: projectLink!)!)
+            self.presentViewController(svc, animated: true, completion: nil)
+        }
+        
+        
+
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+
 }
 
