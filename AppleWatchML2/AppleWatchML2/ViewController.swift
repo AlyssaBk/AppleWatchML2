@@ -41,8 +41,8 @@ class ViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("mainCell", forIndexPath: indexPath)
-        cell.textLabel?.text = String(requestUtilityObject.getProjectsList())
-        
+        let project = requestUtilityObject.getProjectsList()[indexPath.row]
+        cell.textLabel?.text = project.name
         return cell
     }
     
