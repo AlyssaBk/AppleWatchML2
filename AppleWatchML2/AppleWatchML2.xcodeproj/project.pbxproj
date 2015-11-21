@@ -17,6 +17,7 @@
 		29DA69AC1C00D06F00F99F72 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DA69AB1C00D06F00F99F72 /* Project.swift */; };
 		4CF2F6871C00CA9900EF09FA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2F6861C00CA9900EF09FA /* TableViewCell.swift */; };
 		6E2CF35A851D34E7226C6A07 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9ED0CEB173AE37E3203DDD /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		BA3BA24C1C00E458002E7DF0 /* RequestUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3BA24B1C00E458002E7DF0 /* RequestUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		29DA69AB1C00D06F00F99F72 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		4CF2F6861C00CA9900EF09FA /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		6F747D7C64CF686AA6F74C82 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BA3BA24B1C00E458002E7DF0 /* RequestUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestUtility.swift; sourceTree = "<group>"; };
 		BE9ED0CEB173AE37E3203DDD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 		29B4738D1C00C2660066215C /* AppleWatchML2 */ = {
 			isa = PBXGroup;
 			children = (
+				BA3BA24A1C00E41B002E7DF0 /* Utilities */,
 				4CF2F6851C00CA4D00EF09FA /* Model */,
 				4CF2F6841C00CA3F00EF09FA /* ViewController */,
 				29B4738E1C00C2660066215C /* AppDelegate.swift */,
@@ -161,6 +164,14 @@
 				1B6A67AE7AFF09E6AA5D803F /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BA3BA24A1C00E41B002E7DF0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BA3BA24B1C00E458002E7DF0 /* RequestUtility.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		E1F7DEEFA1E0BBB405B0F896 /* Frameworks */ = {
@@ -355,6 +366,7 @@
 			files = (
 				4CF2F6871C00CA9900EF09FA /* TableViewCell.swift in Sources */,
 				29B473911C00C2660066215C /* ViewController.swift in Sources */,
+				BA3BA24C1C00E458002E7DF0 /* RequestUtility.swift in Sources */,
 				29B4738F1C00C2660066215C /* AppDelegate.swift in Sources */,
 				29DA69AC1C00D06F00F99F72 /* Project.swift in Sources */,
 			);
