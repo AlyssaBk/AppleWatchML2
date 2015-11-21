@@ -8,6 +8,7 @@
 
 import UIKit
 import MBProgressHUD
+import Alamofire
 
 class ViewController: UITableViewController {
 
