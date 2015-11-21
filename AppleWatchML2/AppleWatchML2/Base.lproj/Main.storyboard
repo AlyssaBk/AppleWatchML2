@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hLm-XH-m1E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hLm-XH-m1E">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -22,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="3698" y="527"/>
         </scene>
-        <!--Maison Libre-->
+        <!--Projets Disponibles-->
         <scene sceneID="9Qy-uK-OxR">
             <objects>
                 <tableViewController id="cKa-ij-GPR" customClass="ViewController" customModule="AppleWatchML2" customModuleProvider="target" sceneMemberID="viewController">
@@ -43,7 +43,7 @@
                                             <rect key="frame" x="21" y="11" width="179" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -60,7 +60,7 @@
                             <outlet property="delegate" destination="cKa-ij-GPR" id="u7C-GC-IDM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Maison Libre" id="ujb-XH-slm">
+                    <navigationItem key="navigationItem" title="Projets Disponibles" prompt="Maison du Logiciel Libre" id="ujb-XH-slm">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="I0f-ah-lyY">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="b5N-a9-NVO">
                                 <rect key="frame" x="447" y="7" width="133" height="30"/>
