@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import SwiftyJSON
 
 class RequestUtility {
     
@@ -16,23 +17,47 @@ class RequestUtility {
     
     let url = "http://maisonlogiciellibre.org/projects?length=100"
     
-    var projects = [Project]()
+    var projectsList = [Project]()
     
     func getProjects() -> Array<Project> {
         
         Alamofire.request(.GET, "http://maisonlogiciellibre.org/projects?length=100", headers:headers)
             .responseJSON { response in
+                
+                switch response.result {
+                case .Success:
+                    if let value = response.result.value {
+                        let json = JSON(value)
+                        
+                        let dataJSON:JSON = json["data"]
+                        
+                        //If json is .Dictionary
+                        for (_,subJson):(String, JSON) in dataJSON {
+                            
+                            let project = Project.init(id: subJson["id"].string!, name: subJson["name"].string!, link: subJson["link"].string!)
+                            self.projectsList.append(project)
+                        }
+                        
+                        print("JSON: \(json)")
+                        
+                        
+                    }
+                case .Failure(let error):
+                    print(error)
+                }
+                
                 print(response.request)  // original URL request
                 print(response.response) // URL response
                 print(response.data)     // server data
                 print(response.result)   // result of response serialization
                 
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
-                }
+                
+        
         }
         
-        return projects
+        
+        
+        return projectsList
     }
     
     
