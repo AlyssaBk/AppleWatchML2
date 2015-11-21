@@ -10,4 +10,10 @@ class Project {
     var id: Int
     var name: String
     var link: String
+    
+    init(id: Int, name: String, link:String) {
+        self.id = id
+        self.name = name
+        self.link = link
+    }
 }
