@@ -23,7 +23,10 @@ class ViewController: UITableViewController {
         loadingNotification.mode = MBProgressHUDMode.Indeterminate
         loadingNotification.labelText = "Loading"
         
-        var projects = RequestUtility().getProjects()
+        requestUtilityObject.fetchData("All") { (Int) -> Void in
+            loadingNotification.hide(true)
+            self.tableView.reloadData()
+        }
         
     }
 
@@ -33,12 +36,12 @@ class ViewController: UITableViewController {
     
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return requestUtilityObject.getProjects().count
+        return requestUtilityObject.getProjectsList().count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("mainCell", forIndexPath: indexPath)
-        cell.textLabel?.text = String(requestUtilityObject.getProjects())
+        cell.textLabel?.text = String(requestUtilityObject.getProjectsList())
         
         return cell
     }

@@ -19,7 +19,7 @@ class RequestUtility {
     
     var projectsList = [Project]()
     
-    func getProjects() -> Array<Project> {
+    func fetchData(AppModule:String, callback:(Int) -> Void) -> Void{
         
         Alamofire.request(.GET, "http://maisonlogiciellibre.org/projects?length=100", headers:headers)
             .responseJSON { response in
@@ -45,26 +45,22 @@ class RequestUtility {
                         
                         print("JSON: \(json)")
                         
-                        
+                        callback(1)
                     }
                 case .Failure(let error):
                     print(error)
+                    callback(0)
                 }
                 
                 print(response.request)  // original URL request
                 print(response.response) // URL response
                 print(response.data)     // server data
                 print(response.result)   // result of response serialization
-                
-                
-        
         }
-        
-        
-        
-        return projectsList
     }
     
-    
+    func getProjectsList() -> Array<Project> {
+        return self.projectsList
+    }
     
     }

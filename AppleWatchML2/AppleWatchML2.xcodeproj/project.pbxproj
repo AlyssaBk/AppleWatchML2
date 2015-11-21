@@ -16,7 +16,7 @@
 		29B473AF1C00C2660066215C /* AppleWatchML2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B473AE1C00C2660066215C /* AppleWatchML2UITests.swift */; };
 		29DA69AC1C00D06F00F99F72 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DA69AB1C00D06F00F99F72 /* Project.swift */; };
 		4CF2F6871C00CA9900EF09FA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF2F6861C00CA9900EF09FA /* TableViewCell.swift */; };
-		6E2CF35A851D34E7226C6A07 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9ED0CEB173AE37E3203DDD /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6E2CF35A851D34E7226C6A07 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9ED0CEB173AE37E3203DDD /* Pods.framework */; };
 		BA3BA24C1C00E458002E7DF0 /* RequestUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3BA24B1C00E458002E7DF0 /* RequestUtility.swift */; };
 /* End PBXBuildFile section */
 
