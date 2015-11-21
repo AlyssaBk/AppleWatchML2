@@ -11,7 +11,9 @@ import MBProgressHUD
 import Alamofire
 
 class ViewController: UITableViewController {
-
+    
+    var requestUtilityObject = RequestUtility()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,12 +31,12 @@ class ViewController: UITableViewController {
     
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return requestUtilityObject.getProjects().count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("mainCell", forIndexPath: indexPath)
-        cell.textLabel?.text = "test"
+        cell.textLabel?.text = String(requestUtilityObject.getProjects())
         
         return cell
     }
