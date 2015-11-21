@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class ViewController: UITableViewController {
 
@@ -15,6 +16,10 @@ class ViewController: UITableViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
+        let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        loadingNotification.mode = MBProgressHUDMode.Indeterminate
+        loadingNotification.labelText = "Loading"
+        
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
