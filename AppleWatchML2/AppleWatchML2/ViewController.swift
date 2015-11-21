@@ -23,6 +23,8 @@ class ViewController: UITableViewController {
         loadingNotification.mode = MBProgressHUDMode.Indeterminate
         loadingNotification.labelText = "Loading"
         
+        var projects = RequestUtility().getProjects()
+        
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

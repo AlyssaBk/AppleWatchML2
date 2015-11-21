@@ -7,11 +7,11 @@
 //
 
 class Project {
-    var id: Int
-    var name: String
-    var link: String
+    var id: String
+    var name: String?
+    var link: String?
     
-    init(id: Int, name: String, link:String) {
+    init(id: String, name: String, link:String) {
         self.id = id
         self.name = name
         self.link = link
