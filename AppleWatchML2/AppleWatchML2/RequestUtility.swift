@@ -34,7 +34,12 @@ class RequestUtility {
                         //If json is .Dictionary
                         for (_,subJson):(String, JSON) in dataJSON {
                             
-                            let project = Project.init(id: subJson["id"].string!, name: subJson["name"].string!, link: subJson["link"].string!)
+                            let id = "1"
+                            
+                            let name = subJson["name"].rawString()
+                            let link = subJson["link"].rawString()
+                            
+                            let project = Project.init(id: id, name: name!,link: link!)
                             self.projectsList.append(project)
                         }
                         
